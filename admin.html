@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Book Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Book Management Page 📚</h1>
+        <a href="index.html" class="button secondary-button">
+            ← Back to Home
+        </a>
+    </div>
+    
+    <div class="container admin-container">
+        
+        <section class="form-section box-shadow">
+            <h2>⭐ Add New Book</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Technical">Technical</option>
+                    </select>
+                </div>
+                <button type="submit" class="button primary-button">Add Book</button>
+            </form>
+        </section>
+
+        <section class="operations-section">
+            <h2>📖 Book Operations</h2>
+            <div class="controls-grid">
+                <div class="control-group">
+                    <h3>Sort:</h3>
+                    <button id="sortByAToZ" class="button secondary-button">Sort by Title A → Z</button>
+                    <button id="sortByZToA" class="button secondary-button">Sort by Title Z → A</button>
+                </div>
+
+                <div class="control-group">
+                    <h3>Filter by Category:</h3>
+                    <select id="filterCategory">
+                        <option value="All">All</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Technical">Technical</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="display-section">
+            <h2>🗂️ My Books</h2>
+            <div id="booksDisplay" class="books-grid">
+                </div>
+            <p id="emptyMessage" class="hidden">No books available. Add a new book above!</p>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
